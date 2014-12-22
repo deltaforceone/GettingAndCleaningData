@@ -1,3 +1,5 @@
+### Description of variables in the TidyData
+
 "Volunteer"
 "Activity"
 "tBodyAcc.mean.X"
