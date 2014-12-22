@@ -72,19 +72,16 @@ DF_TestingData | "X_test.txt" | 561 columns of measurement data, one for each fe
 #### Use rbind(), since both datasets have identical column structures
 DF_MergedDataset <- rbind(DF_Training,DF_Testing)
 
-# Step 5: Create the Tidy data set with the average of each variable for each subject ("Volunteer")
-# and activity ("Activity"), using the aggregate() {stats} function
+### Step 7: Create the Tidy data set with the average of each variable for each subject ("Volunteer") and activity ("Activity"), using the aggregate() {stats} function
 DF_Tidy <- aggregate(x = DF_MergedDataset[,c(mean_names,std_names)], 
                     by = list(DF_MergedDataset$Activity,DF_MergedDataset$Volunteer), 
                     FUN = "mean")
-# Switch the 1st 2 (grouping) variables so that Volunteer is the first column
+#### Switch the 1st 2 (grouping) variables so that Volunteer is the first column
 DF_Tidy[,1:2] <- DF_Tidy[,2:1]
 names(DF_Tidy)[1:2] <- c("Volunteer","Activity")
 
-# I used the following line to create the "TidyData.txt" text file in my working directory
-# This is the file that I have uploaded in my assigment submission
-##  write.table(DF_Tidy, file = "TidyData.txt", row.names = FALSE)
-
-# You can use the command:
-# read.table("TidyData.txt", header = TRUE)
+### Note on writing and reading of the tidy data set
+* I used the following line to create the "TidyData.txt" text file in my working directory
+  * *write.table(DF_Tidy, file = "TidyData.txt", row.names = FALSE)*
+* You can use the command:  *read.table("TidyData.txt", header = TRUE)*
 # to read the file to a data frame (assuming it is located in your home directory)
