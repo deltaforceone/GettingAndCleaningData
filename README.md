@@ -46,12 +46,12 @@ DF_TestingData | "X_test.txt" | 561 columns of measurement data, one for each fe
 * correct the error in the names where "Body" is repeated twice
   * std_names <- gsub("BodyBody","Body",std_names)
 
-# Create Training dataset with only the mean & std measurements as variables
-DF_Training <- DF_TrainingData[,c(mean_codes,std_codes)]
-# Add the dataframes containing the volunteer and activity labels to the Training dataset
-DF_Training <- cbind(DF_SubjectTrain,
-                     DF_TrainingLabels,
-                     DF_Training)
+### Step 4: Create Training dataset with only the mean & std measurements as variables
+* DF_Training <- DF_TrainingData[,c(mean_codes,std_codes)]
+### Then add the dataframes containing the volunteer and activity labels to the Training dataset
+* DF_Training <- cbind(DF_SubjectTrain,
+                       DF_TrainingLabels,
+                       DF_Training)
 # Give this dataframe descriptive names
 names(DF_Training) <- c("Volunteer","Activity",mean_names,std_names)
 # Use the Activity Labels dataset (from "activity_labels.txt") to convert Activity from codes (int)
