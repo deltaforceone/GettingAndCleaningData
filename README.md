@@ -48,15 +48,14 @@ DF_TestingData | "X_test.txt" | 561 columns of measurement data, one for each fe
 
 ### Step 4: Create Training dataset with only the mean & std measurements as variables
 * DF_Training <- DF_TrainingData[,c(mean_codes,std_codes)]
-### Then add the dataframes containing the volunteer and activity labels to the Training dataset
-* DF_Training <- cbind(DF_SubjectTrain,
+* Then add the dataframes containing the volunteer and activity labels to the Training dataset
+  DF_Training <- cbind(DF_SubjectTrain,
                        DF_TrainingLabels,
                        DF_Training)
-# Give this dataframe descriptive names
-names(DF_Training) <- c("Volunteer","Activity",mean_names,std_names)
-# Use the Activity Labels dataset (from "activity_labels.txt") to convert Activity from codes (int)
-# to names (char)
-DF_Training$Activity <- DF_ActivityLabels$V2[match(DF_TrainingLabels$V1,DF_ActivityLabels$V1)]
+* Give this dataframe descriptive names
+  names(DF_Training) <- c("Volunteer","Activity",mean_names,std_names)
+* Use the Activity Labels dataset (from "activity_labels.txt") to convert Activity from codes (int) to names (char)
+  DF_Training$Activity <- DF_ActivityLabels$V2[match(DF_TrainingLabels$V1,DF_ActivityLabels$V1)]
 
 # Create Testing dataset with only the mean & std measurements as variables
 DF_Testing <- DF_TestingData[,c(mean_codes,std_codes)]
