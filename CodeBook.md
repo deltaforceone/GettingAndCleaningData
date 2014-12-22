@@ -1,10 +1,10 @@
 ### Description of variables in the TidyData.xls output file
 
-Variable | Description | Units
+Variable | Type | Units
 -------- | ----------- | -----
-Volunteer |
-Activity |
-tBodyAcc.mean.X |
+Volunteer | integer | Not 
+Activity | character |
+tBodyAcc.mean.X | numeric |
 tBodyAcc.mean.Y |
 tBodyAcc.mean.Z |
 tGravityAcc.mean.X |
