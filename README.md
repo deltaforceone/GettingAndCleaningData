@@ -57,20 +57,19 @@ DF_TestingData | "X_test.txt" | 561 columns of measurement data, one for each fe
 * Use the Activity Labels dataset (from "activity_labels.txt") to convert Activity from codes (int) to names (char)
   DF_Training$Activity <- DF_ActivityLabels$V2[match(DF_TrainingLabels$V1,DF_ActivityLabels$V1)]
 
-# Create Testing dataset with only the mean & std measurements as variables
-DF_Testing <- DF_TestingData[,c(mean_codes,std_codes)]
-# Add the dataframes containing the volunteer and activity labels to the Testing dataset
-DF_Testing <- cbind(DF_SubjectTest,
-                    DF_TestingLabels,
-                    DF_Testing)
-# Give this dataframe descriptive names
-names(DF_Testing) <- c("Volunteer","Activity",mean_names,std_names)
-# Use the Activity Labels dataset (from "activity_labels.txt") to convert Activity from codes (int)
-# to names (char)
-DF_Testing$Activity <- DF_ActivityLabels$V2[match(DF_TestingLabels$V1,DF_ActivityLabels$V1)]
+### Step 5: Create Testing dataset with only the mean & std measurements as variables
+* DF_Testing <- DF_TestingData[,c(mean_codes,std_codes)]
+* Then add the dataframes containing the volunteer and activity labels to the Testing dataset
+  DF_Testing <- cbind(DF_SubjectTest,
+                      DF_TestingLabels,
+                      DF_Testing)
+* Give this dataframe descriptive names
+  names(DF_Testing) <- c("Volunteer","Activity",mean_names,std_names)
+* Use the Activity Labels dataset (from "activity_labels.txt") to convert Activity from codes (int) to names (char)
+  DF_Testing$Activity <- DF_ActivityLabels$V2[match(DF_TestingLabels$V1,DF_ActivityLabels$V1)]
 
-# Merge the Training and Testing dataframes. Use rbind(), since both datasets have identical column
-# structures
+### Step 6: Merge the Training and Testing dataframes
+#### Use rbind(), since both datasets have identical column structures
 DF_MergedDataset <- rbind(DF_Training,DF_Testing)
 
 # Step 5: Create the Tidy data set with the average of each variable for each subject ("Volunteer")
