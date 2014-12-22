@@ -3,17 +3,17 @@ GettingAndCleaningData
 
 Repo for Johns Hopkins : Getting and Cleaning Data assignment 
 
-Note
-====
+###Note
 The code and filepaths in the attached "run_analysis.R" file assume
 that the "UCI HAR Dataset" folder is located in the user's working directory. 
 Hence, the "features.txt" file would be located as follows: "./UCI HAR Dataset/features.txt"
 
-Step 1: Loading the text files as data frames
-=============================================
+###Step 1: Loading the text files as data frames
 The code first loads the following text files from the "UCI HAR Dataset" directory into data frames:
-(dataframe ~ text file)
-1. DF_ActivityLabels ~ "activity_labels.txt" :- Activity Codes (1-6) and corresponing Labels
+
+dataframe | text file | description
+--------- | --------- | -----------
+DF_ActivityLabels | "activity_labels.txt" | Activity Codes (1-6) and corresponing Labels
 2. DF_Features ~ "features.txt" :- Feature Codes (integers, 1-561) and corresponing (original) Labels
 3. DF_SubjectTrain ~ "subject_train.txt" :- 1 column of integers (1-30) identifying the volunteer for each measurement in training set
 4. DF_TrainingLabels ~ "y_train.txt" :- 1 column of integers (1-6) identifying the activity for each measurement in training set
