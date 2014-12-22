@@ -3,7 +3,7 @@ GettingAndCleaningData
 
 Repo for Johns Hopkins : Getting and Cleaning Data assignment 
 
-###Note
+##Note
 The code and filepaths in the attached "run_analysis.R" file assume
 that the "UCI HAR Dataset" folder is located in the user's working directory. 
 Hence, the "features.txt" file would be located as follows: "./UCI HAR Dataset/features.txt"
@@ -22,28 +22,29 @@ DF_SubjectTest | "subject_test.txt" | 1 column of integers (1-30) identifying th
 DF_TestingLabels | "y_test.txt" | 1 column of integers (1-6) identifying the activity for each measurement in testing set
 DF_TestingData | "X_test.txt" | 561 columns of measurement data, one for each feature variable in testing set
 
+### Step 2: Get the variable names & indices which represent measurements on the mean
+* mean_names <- grep(pattern="mean()", x=DF_Features$V2, value = TRUE, fixed=TRUE)
+* mean_codes <- DF_Features$V1[match(mean_names,DF_Features$V2)]
 
-# Get the variable names & indices which represent measurements on the mean
-mean_names <- grep(pattern="mean()", x=DF_Features$V2, value = TRUE, fixed=TRUE)
-mean_codes <- DF_Features$V1[match(mean_names,DF_Features$V2)]
-# Correct some errors in the original names:
-# 1. remove "()" characters
-mean_names <- gsub("[()]","",mean_names)
-# 2. replace any "-" characters with "."
-mean_names <- gsub("-",".",mean_names)
-# 3. correct the error in the names where "Body" is repeated twice
-mean_names <- gsub("BodyBody","Body",mean_names)
+### Step 2a: Correct some errors in the original names:
+* remove "()" characters
+  * mean_names <- gsub("[()]","",mean_names)
+* replace any "-" characters with "."
+  * mean_names <- gsub("-",".",mean_names)
+* correct the error in the names where "Body" is repeated twice
+  * mean_names <- gsub("BodyBody","Body",mean_names)
 
-# Get the variable names & indices which represent measurements on the standard deviation
-std_names <- grep(pattern="std()", x=DF_Features$V2, value = TRUE, fixed=TRUE)
-std_codes <- DF_Features$V1[match(std_names,DF_Features$V2)]
-# Correct some errors in the original names:
-# 1. remove "()" characters
-std_names <- gsub("[()]","",std_names)
-# 2. replace any "-" characters with "."
-std_names <- gsub("-",".",std_names)
-# 3. correct the error in the names where "Body" is repeated twice
-std_names <- gsub("BodyBody","Body",std_names)
+### Step 3: Get the variable names & indices which represent measurements on the standard deviation
+* std_names <- grep(pattern="std()", x=DF_Features$V2, value = TRUE, fixed=TRUE)
+* std_codes <- DF_Features$V1[match(std_names,DF_Features$V2)]
+
+### Step 3a: Correct some errors in the original names:
+* remove "()" characters
+  * std_names <- gsub("[()]","",std_names)
+* replace any "-" characters with "."
+  * std_names <- gsub("-",".",std_names)
+* correct the error in the names where "Body" is repeated twice
+  * std_names <- gsub("BodyBody","Body",std_names)
 
 # Create Training dataset with only the mean & std measurements as variables
 DF_Training <- DF_TrainingData[,c(mean_codes,std_codes)]
