@@ -2,71 +2,71 @@
 
 Variable | Type | Units
 -------- | ----------- | -----
-Volunteer | integer | Not 
+Volunteer | integer | 
 Activity | character |
-tBodyAcc.mean.X | numeric |
-tBodyAcc.mean.Y |
-tBodyAcc.mean.Z |
-tGravityAcc.mean.X |
-tGravityAcc.mean.Y |
-tGravityAcc.mean.Z |
-tBodyAccJerk.mean.X |
-tBodyAccJerk.mean.Y |
-tBodyAccJerk.mean.Z |
-tBodyGyro.mean.X |
-tBodyGyro.mean.Y |
-tBodyGyro.mean.Z |
-tBodyGyroJerk.mean.X |
-tBodyGyroJerk.mean.Y |
-tBodyGyroJerk.mean.Z |
-tBodyAccMag.mean |
-tGravityAccMag.mean |
-tBodyAccJerkMag.mean |
-tBodyGyroMag.mean |
-tBodyGyroJerkMag.mean |
-fBodyAcc.mean.X |
-fBodyAcc.mean.Y |
-fBodyAcc.mean.Z |
-fBodyAccJerk.mean.X |
-fBodyAccJerk.mean.Y |
-fBodyAccJerk.mean.Z |
-fBodyGyro.mean.X | 
-fBodyGyro.mean.Y |
-fBodyGyro.mean.Z |
-fBodyAccMag.mean |
-fBodyAccJerkMag.mean |
-fBodyGyroMag.mean |
-fBodyGyroJerkMag.mean |
-tBodyAcc.std.X |
-tBodyAcc.std.Y |
-tBodyAcc.std.Z |
-tGravityAcc.std.X |
-tGravityAcc.std.Y |
-tGravityAcc.std.Z |
-tBodyAccJerk.std.X |
-tBodyAccJerk.std.Y |
-tBodyAccJerk.std.Z |
-tBodyGyro.std.X |
-tBodyGyro.std.Y |
-tBodyGyro.std.Z |
-tBodyGyroJerk.std.X |
-tBodyGyroJerk.std.Y |
-tBodyGyroJerk.std.Z |
-tBodyAccMag.std |
-tGravityAccMag.std |
-tBodyAccJerkMag.std |
-tBodyGyroMag.std |
-tBodyGyroJerkMag.std |
-fBodyAcc.std.X |
-fBodyAcc.std.Y |
-fBodyAcc.std.Z |
-fBodyAccJerk.std.X |
-fBodyAccJerk.std.Y |
-fBodyAccJerk.std.Z |
-fBodyGyro.std.X |
-fBodyGyro.std.Y |
-fBodyGyro.std.Z |
-fBodyAccMag.std |
-fBodyAccJerkMag.std |
-fBodyGyroMag.std |
-fBodyGyroJerkMag.std |
+tBodyAcc.mean.X | numeric | g
+tBodyAcc.mean.Y | numeric | g
+tBodyAcc.mean.Z | numeric | g
+tGravityAcc.mean.X | numeric | g
+tGravityAcc.mean.Y | numeric | g
+tGravityAcc.mean.Z | numeric | g
+tBodyAccJerk.mean.X | numeric | g/sec
+tBodyAccJerk.mean.Y | numeric | g/sec
+tBodyAccJerk.mean.Z | numeric | g/sec
+tBodyGyro.mean.X | numeric | radians/sec
+tBodyGyro.mean.Y | numeric | radians/sec
+tBodyGyro.mean.Z | numeric | radians/sec
+tBodyGyroJerk.mean.X | numeric | radians/sec/sec
+tBodyGyroJerk.mean.Y | numeric | radians/sec/sec
+tBodyGyroJerk.mean.Z | numeric | radians/sec/sec
+tBodyAccMag.mean | numeric | g
+tGravityAccMag.mean | numeric | g
+tBodyAccJerkMag.mean | numeric | g/sec
+tBodyGyroMag.mean | numeric | radians/sec
+tBodyGyroJerkMag.mean | numeric | radians/sec/sec
+fBodyAcc.mean.X | numeric | g
+fBodyAcc.mean.Y | numeric | g
+fBodyAcc.mean.Z | numeric | g
+fBodyAccJerk.mean.X | numeric | g/sec
+fBodyAccJerk.mean.Y | numeric | g/sec
+fBodyAccJerk.mean.Z | numeric | g/sec
+fBodyGyro.mean.X | numeric | 
+fBodyGyro.mean.Y | numeric |
+fBodyGyro.mean.Z | numeric |
+fBodyAccMag.mean | numeric |
+fBodyAccJerkMag.mean | numeric |
+fBodyGyroMag.mean | numeric |
+fBodyGyroJerkMag.mean | numeric |
+tBodyAcc.std.X | numeric |
+tBodyAcc.std.Y | numeric |
+tBodyAcc.std.Z | numeric |
+tGravityAcc.std.X | numeric |
+tGravityAcc.std.Y | numeric |
+tGravityAcc.std.Z | numeric |
+tBodyAccJerk.std.X | numeric |
+tBodyAccJerk.std.Y | numeric |
+tBodyAccJerk.std.Z | numeric |
+tBodyGyro.std.X | numeric |
+tBodyGyro.std.Y | numeric |
+tBodyGyro.std.Z | numeric |
+tBodyGyroJerk.std.X | numeric |
+tBodyGyroJerk.std.Y | numeric |
+tBodyGyroJerk.std.Z | numeric |
+tBodyAccMag.std | numeric |
+tGravityAccMag.std | numeric |
+tBodyAccJerkMag.std | numeric |
+tBodyGyroMag.std | numeric |
+tBodyGyroJerkMag.std | numeric |
+fBodyAcc.std.X | numeric |
+fBodyAcc.std.Y | numeric |
+fBodyAcc.std.Z | numeric |
+fBodyAccJerk.std.X | numeric |
+fBodyAccJerk.std.Y | numeric |
+fBodyAccJerk.std.Z | numeric |
+fBodyGyro.std.X | numeric |
+fBodyGyro.std.Y | numeric |
+fBodyGyro.std.Z | numeric |
+fBodyAccMag.std | numeric |
+fBodyAccJerkMag.std | numeric |
+fBodyGyroMag.std | numeric |
+fBodyGyroJerkMag.std | numeric |
