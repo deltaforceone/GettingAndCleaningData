@@ -12,15 +12,15 @@ Hence, the "features.txt" file would be located as follows: "./UCI HAR Dataset/f
 Step 1: Loading the text files as data frames
 =============================================
 The code first loads the following text files from the "UCI HAR Dataset" directory into data frames:
-
-1. DF_ActivityLabels <- "activity_labels.txt" :- Activity Codes (1-6) and corresponing Labels
-2. DF_Features <- "features.txt" :- Feature Codes (integers, 1-561) and corresponing (original) Labels
-3. DF_SubjectTrain <- "subject_train.txt" :- 1 column of integers (1-30) identifying the volunteer for each measurement in training set
-4. DF_TrainingLabels <- "y_train.txt" :- 1 column of integers (1-6) identifying the activity for each measurement in training set
-5. DF_TrainingData <- "X_train.txt" :- 561 columns of measurement data, one for each feature variable in training set
-6. DF_SubjectTest <- "subject_test.txt" :- 1 column of integers (1-30) identifying the volunteer for each measurement in testing set
-7. DF_TestingLabels <- "y_test.txt" :- 1 column of integers (1-6) identifying the activity for each measurement in testing set
-8. DF_TestingData <- "X_test.txt" :- 561 columns of measurement data, one for each feature variable in testing set
+(dataframe ~ text file)
+1. DF_ActivityLabels ~ "activity_labels.txt" :- Activity Codes (1-6) and corresponing Labels
+2. DF_Features ~ "features.txt" :- Feature Codes (integers, 1-561) and corresponing (original) Labels
+3. DF_SubjectTrain ~ "subject_train.txt" :- 1 column of integers (1-30) identifying the volunteer for each measurement in training set
+4. DF_TrainingLabels ~ "y_train.txt" :- 1 column of integers (1-6) identifying the activity for each measurement in training set
+5. DF_TrainingData ~ "X_train.txt" :- 561 columns of measurement data, one for each feature variable in training set
+6. DF_SubjectTest ~ "subject_test.txt" :- 1 column of integers (1-30) identifying the volunteer for each measurement in testing set
+7. DF_TestingLabels ~ "y_test.txt" :- 1 column of integers (1-6) identifying the activity for each measurement in testing set
+8. DF_TestingData ~ "X_test.txt" :- 561 columns of measurement data, one for each feature variable in testing set
 
 
 # Get the variable names & indices which represent measurements on the mean
