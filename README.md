@@ -76,12 +76,11 @@ DF_MergedDataset <- rbind(DF_Training,DF_Testing)
 DF_Tidy <- aggregate(x = DF_MergedDataset[,c(mean_names,std_names)], 
                     by = list(DF_MergedDataset$Activity,DF_MergedDataset$Volunteer), 
                     FUN = "mean")
-#### Switch the 1st 2 (grouping) variables so that Volunteer is the first column
-DF_Tidy[,1:2] <- DF_Tidy[,2:1]
-names(DF_Tidy)[1:2] <- c("Volunteer","Activity")
+#### Switch the first 2 (grouping) variables so that Volunteer is the first column
+*DF_Tidy[,1:2] <- DF_Tidy[,2:1]*
+*names(DF_Tidy)[1:2] <- c("Volunteer","Activity")*
 
 ### Note on writing and reading of the tidy data set
 * I used the following line to create the "TidyData.txt" text file in my working directory
   * *write.table(DF_Tidy, file = "TidyData.txt", row.names = FALSE)*
-* You can use the command:  *read.table("TidyData.txt", header = TRUE)*
-# to read the file to a data frame (assuming it is located in your home directory)
+* You can use the command:  *read.table("TidyData.txt", header = TRUE)* to read the file to a data frame (assuming it is located in your home directory)
